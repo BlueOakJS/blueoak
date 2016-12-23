@@ -1,0 +1,38 @@
+Notes: 
+1) On mobile, there is a 'read more' link under design Elements, Front-End, Back-End but not on desktop? Anchor drops maybe?
+
+2) Need links for each of the 'Resources', some don't appear to be public
+
+3) SEO needs?
+
+4) How does contact work?
+
+5) Does the slider grab 'latest' blog posts from the live site?
+-- CORS prevents us from loading articles automagically
+
+6) Should icons link to respective technology they represent? NO
+
+7) Should 'Foundation' be caps in all places? Seems like it is a proper noun. (Yes)
+
+8) Fonts, kerning, leading
+-- Leading different in spots on mobile like under DE/FE/BE
+-- Still waiting on Font to be approved, may have to use FONT from webste, Proxima Nova
+
+9) "Adobe Illustrator Start Kit" spacing above is not uniform across all paragraphs, is that on purpose? Nope, fix
+
+10) DESIGN: 
+-- Plus cut for BG is width of container
+-- Possibly replace my cuts with yours, I can provide the folder
+-- Library icons possibly cut the same height and vertically centered to automatically handle spacing?
+
+Blockers:
+Links
+CORS against WP RSS feed endpoint
+
+
+
+Needs/Blockers: 
+
+Links for Repositories: They need to be made available under github.com/PointSource by Andre, currently private
+Font - Where can I link to it or get?
+RSS Feed from pointsource.com/feed/ - Currently blocked by CORS, need someone to enable access 
