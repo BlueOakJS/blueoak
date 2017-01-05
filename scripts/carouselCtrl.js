@@ -3,7 +3,6 @@ var app = angular.module("carousel", []);
 app.controller("carouselCtrl", function($http, $scope) {
     
     function activate() {
-
     	getXMLRssFeed((err, feedData) => {
     		if (err) {
     			return;
