@@ -219,6 +219,7 @@ a:hover {
 .article__title {
 	color: #419bf9;
 	font-size: 20px;
+	font-weight: 700;
 	line-height: 124%;
 	padding: 86px 15px 15px 15px;
 	text-transform: none;
@@ -283,6 +284,14 @@ h3.blue a img {
 	height: 18px;
 	margin-right: 10px;
 	width: 18px;
+}
+
+p a {
+	color: #419bf9 !important;
+}
+
+h3 a img {
+	vertical-align: bottom;
 }
 
 /* This is the breakpoint where it all folds up */
