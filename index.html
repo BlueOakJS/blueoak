@@ -1,143 +1,166 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>BlueOakJS</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/app.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="scripts/smoothScroll.js"></script>
-		<script src="scripts/app.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-		<script src="scripts/carouselCtrl.js"></script>
-		
-		<script src="https://use.typekit.net/kjn3tyt.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	</head>
-	<body>
-		<div class="container-900">
-			<div class="container">
-				<div class="row center">
-					<div class="col-xl-12">
-						<img class="logo" src="assets/BO_Logo.png" />
-					</div>
-				</div>
-				<div class="row center header">
-					<div class="col-xl-12">
-						<h1>Align Your Team</h1>
-						<h2>Get To Market Faster</h2>
-					</div>
-				</div>
-				<div class="row center">
-					<div class="col-xs-10 col-xs-offset-1">
-						<p class="tagline">BlueOak's comprehensive set of technologies accelerates your mobile web and app design and development efforts.</p>
-					</div>
-				</div>
-				<div class="row highlights">
-					<div class="col-md-4 center">
-						<img src="assets/Design_Icon.svg" class="big-icon" />
-						<h3>Design Elements</h3>
-						<p>Speed up design process with free widget sets for Axure and Sketch</p>
-						<a onClick="return smoothScrollTo('design-elements');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
-					</div>
-					<div class="col-md-4 center">
-						<img src="assets/Fe_Icon.svg" class="big-icon" />
-						<h3>Front-End</h3>
-						<p>Kickstart front-end development with open source components to get you coding faster</p>
-						<a onClick="return smoothScrollTo('front-end');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
-					</div>
-					<div class="col-md-4 center">
-						<img src="assets/BE_Icon.svg" class="big-icon" />
-						<h3>Back-End</h3>
-						<p>Power mobile apps or sites with BlueOak Server, a RESTful API using Node.js and the Swagger/Open API</p>
-						<a onClick="return smoothScrollTo('back-end');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
-					</div>
-				</div>
-				<div class="row component__row" id="design-elements">
-					<div class="col-md-4 component__links">
-						<h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/Design_Icon.svg" class="small-icon" /> Design Elements</h3>
-						<h4>Resources</h4>
-						<h3 class="blue"><a href="./lib/BlueOak_Axure_Libraries_v2.zip"><img src="assets/ic_file_download_48px.svg" /> Axure Library Download</a></h3>
-						<h3 class="blue"><a href="http://6jcgbs.axshare.com/about.html" target="_blank"><img src="assets/DL_Icon.svg" /> Axure Library Demo</a></h3>
-						<!-- <h3 class="blue"><a href="#"><img src="assets/DL_Icon.svg" /> Illustrator Starter Kit</a></h3> -->
-						<h3 class="blue"><a href="./lib/BlueOak_Sketch_Library_v1.zip"><img src="assets/ic_file_download_48px.svg" /> Sketch Library Download</a></h3>
-						<h3 class="blue"><a href="https://sketch.cloud/s/mz0k" target="_blank"><img src="assets/DL_Icon.svg" /> Sketch Library Demo</a></h3>
-					</div>
-					<div class="col-md-8 component__description">
-						<h3 class="hidden-xs hidden-sm"><img src="assets/Design_Icon.svg" class="small-icon" /> Design Elements</h3>
-						<p>Align your UX and visual design efforts and focus more on what matters by using the BlueOak component libraries for Axure and Sketch to accelerate the design process while maintaining creative freedom. The kit, based on <a href="http://foundation.zurb.com/sites/docs/kitchen-sink.html" target="_blank">Foundation's Kitchen Sink</a>, provides designers of all levels a clean, modern starting point to design for mobile faster and more efficiently.</p>
-						<p>The Axure 8 Libraries provides:</p>
-						<ul>
-							<li><span>Page Elements, a replacement UI component set</span></li>
-							<li><span>Callout widgets to document wireframes</span></li>
-							<li><span>Screens and grids for common phone, tablet, and desktop views</span></li>
-							<li><span>Flow chart elements to match your wireframe</span></li>
-						</ul>
-						<!-- <p>The Adobe Illustrator Starter Kit provides:</p>
+
+<head>
+    <title>BlueOakJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/smoothScroll.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="scripts/carouselCtrl.js"></script>
+    <script src="https://use.typekit.net/kjn3tyt.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {  
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),   m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)  
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      
+    ga('create', 'UA-45110375-2', 'auto');  
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="container-900">
+        <div class="container">
+            <div class="row center">
+                <div class="col-xl-12">
+                    <img class="logo" src="assets/BO_Logo.png" />
+                </div>
+            </div>
+            <div class="row center header">
+                <div class="col-xl-12">
+                    <h1>Align Your Team</h1>
+                    <h2>Get To Market Faster</h2>
+                </div>
+            </div>
+            <div class="row center">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <p class="tagline">BlueOak's comprehensive set of technologies accelerates your mobile web and app design and development efforts.</p>
+                </div>
+            </div>
+            <div class="row highlights">
+                <div class="col-md-4 center">
+                    <img src="assets/Design_Icon.svg" class="big-icon" />
+                    <h3>Design Elements</h3>
+                    <p>Speed up design process with free widget sets for Axure and Sketch</p>
+                    <a onClick="return smoothScrollTo('design-elements');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
+                </div>
+                <div class="col-md-4 center">
+                    <img src="assets/Fe_Icon.svg" class="big-icon" />
+                    <h3>Front-End</h3>
+                    <p>Kickstart front-end development with open source components to get you coding faster</p>
+                    <a onClick="return smoothScrollTo('front-end');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
+                </div>
+                <div class="col-md-4 center">
+                    <img src="assets/BE_Icon.svg" class="big-icon" />
+                    <h3>Back-End</h3>
+                    <p>Power mobile apps or sites with BlueOak Server, a RESTful API using Node.js and the Swagger/Open API</p>
+                    <a onClick="return smoothScrollTo('back-end');" class="read-more hidden-xl hidden-lg hidden-md"><img src="assets/read-more.png" /></a>
+                </div>
+            </div>
+            <div class="row component__row" id="design-elements">
+                <div class="col-md-4 component__links">
+                    <h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/Design_Icon.svg" class="small-icon" /> Design Elements</h3>
+                    <h4>Resources</h4>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Download', eventLabel: 'Design - Axure Library Download'});" href="./lib/BlueOak_Axure_Libraries_v2.zip"><img src="assets/ic_file_download_48px.svg" /> Axure Library Download</a></h3>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Demo', eventLabel: 'Design - Axure Library Demo'});" href="http://6jcgbs.axshare.com/about.html" target="_blank"><img src="assets/DL_Icon.svg" /> Axure Library Demo</a></h3>
+                    <!-- <h3 class="blue"><a href="#"><img src="assets/DL_Icon.svg" /> Illustrator Starter Kit</a></h3> -->
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Download', eventLabel: 'Design - Sketch Library Download'});" href="./lib/BlueOak_Sketch_Library_v1.zip"><img src="assets/ic_file_download_48px.svg" /> Sketch Library Download</a></h3>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Demo', eventLabel: 'Design - Sketch Library Demo'});" href="https://sketch.cloud/s/mz0k" target="_blank"><img src="assets/DL_Icon.svg" /> Sketch Library Demo</a></h3>
+                </div>
+                <div class="col-md-8 component__description">
+                    <h3 class="hidden-xs hidden-sm"><img src="assets/Design_Icon.svg" class="small-icon" /> Design Elements</h3>
+                    <p>Align your UX and visual design efforts and focus more on what matters by using the BlueOak component libraries for Axure and Sketch to accelerate the design process while maintaining creative freedom. The kit, based on <a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Click', eventLabel: 'Design - Foundation KLitchen Sink'});" href="http://foundation.zurb.com/sites/docs/kitchen-sink.html" target="_blank">Foundation's Kitchen Sink</a>, provides designers of all levels a clean, modern starting point to design for mobile faster and more efficiently.</p>
+                    <p>The Axure 8 Libraries provides:</p>
+                    <ul>
+                        <li><span>Page Elements, a replacement UI component set</span></li>
+                        <li><span>Callout widgets to document wireframes</span></li>
+                        <li><span>Screens and grids for common phone, tablet, and desktop views</span></li>
+                        <li><span>Flow chart elements to match your wireframe</span></li>
+                    </ul>
+                    <!-- <p>The Adobe Illustrator Starter Kit provides:</p>
 						<ul>
 							<li><span>1:1 translation of the BlueOak components</span></li>
 							<li><span>Templates to copy, paste, and arrange desired elements to build your application or customize them to create a unique look and feel</span></li>
 						</ul> -->
-						<p>The Sketch Library provides:</p>
-						<ul>
-							<li><span>Symbols of the Foundation UI Components</span></li>
-							<li><span>Flexible Grid Symbols for all screen sizes</span></li>
-							<li><span>Preset Document Colors based on Foundation presets</span></li>
-						</ul>
-						<!-- <img class="icon" src="assets/DX_1.png" /> -->
-						<img class="icon" src="assets/DX_2.png" />
-						<img class="icon" src="assets/DX_3.png" />
-					</div>
-				</div>
-				<div class="row component__row" id="front-end">
-					<div class="col-md-4 component__links">
-						<h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/Fe_Icon.svg" class="small-icon" /> Front-End</h3>
-						<h4>Resources</h4>
-						<h3 class="blue"><a href="https://github.com/BlueOakJS/blueoak-ui/wiki" target="_blank"><img src="assets/DL_Icon.svg" /> Documentation</a></h3>
-						<h3 class="blue"><a href="https://github.com/BlueOakJS/blueoak-ui" target="_blank"><img src="assets/DL_Icon.svg" /> GitHub Repo</a></h3>
-					</div>
-					<div class="col-md-8 component__description">
-						<h3 class="hidden-xs hidden-sm"><img src="assets/Fe_Icon.svg" class="small-icon" /> Front-End</h3>
-						<p>BlueOak FE pre-integrates high-quality open source components and automates common tasks to simplify and accelerate development. With greater consistency and fewer bugs, developers can focus efforts on functions that deliver increased busines value.</p>
-						<p>BlueOak FE integrates open source components, such as AngularJS 1.x, Foundation for Sites, Cordova, Gulp, Browsersync, Swagger/OpenAPI, with a best-of-breed build system to reduce the amount of time spent on the table stakes of app development. Components provide higher level UI tasks, such as Googe maps and card.io, and utilizing BlueOak DX along with FE provides a common design language across your teams resulting in greater efficiencies in your UI development.</p>
-						<img class="icon" src="assets/FE_1.png" />
-						<img class="icon" src="assets/FE_2.png" />
-						<img class="icon" src="assets/FE_3.png" />
-						<img class="icon" src="assets/FE_4.png" />
-						<img class="icon" src="assets/FE_5.png" />
-						<img class="icon" src="assets/FE_6.png" />
-						<img class="icon" src="assets/FE_7.png" />
-						<img class="icon" src="assets/FE_8.png" />
-					</div>
-				</div>
-				<div class="row component__row" id="back-end">
-					<div class="col-md-4 component__links">
-						<h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/BE_Icon.svg" class="small-icon" /> Back-End</h3>
-						<h4>Resources</h4>
-						<h3 class="blue"><a href="https://github.com/BlueOakJS/blueoak-server/wiki" target="_blank"><img src="assets/DL_Icon.svg" /> Documentation</a></h3>
-						<h3 class="blue"><a href="https://github.com/BlueOakJS/blueoak-server" target="_blank"><img src="assets/DL_Icon.svg" /> GitHub Repo</a></h3>
-					</div>
-					<div class="col-md-8 component__description">
-						<h3 class="hidden-xs hidden-sm"><img src="assets/BE_Icon.svg" class="small-icon" /> Back-End</h3>
-						<p>BlueOak Server, built on Swagger/Open API, combines the best Node.js libraries into a single tool for building RESTful APIs. It uses Express under the covers and adds many additional features:</p>
-						<ul>
-							<li><span>Easy configuration</span></li>
-							<li><span>Clustering</span></li>
-							<li><span>Logging</span></li>
-							<li><span>Dependency Injection</span></li>
-						</ul>
-						<p>Using Swagger API to drive runtime behavior, BlueOak Server loads your Swagger API spec, connects the paths it defines to your implementation code, exposes that API to the network and validates that every request is well-formed per your spec. BlueOak Server will even generate documentation using <a href="http://swagger.io/swagger-ui/" target="_blank">swagger-ui</a>.</p>
-						<img class="icon" src="assets/BE_1.png" />
-						<img class="icon" src="assets/BE_2.png" />
-						<img class="icon" src="assets/BE_3.png" />
-					</div>
-				</div>
-			</div>
-
-			<div class="carousel__container">
-				<div class="row carousel" ng-app="carousel" ng-controller="carouselCtrl">
-					<div class="col-xs-12 article__desktop-row"><!-- Static Carousel -->
-						<!-- <div class="col-xs-4 article" ng-repeat="article in articles">
+                    <p>The Sketch Library provides:</p>
+                    <ul>
+                        <li><span>Symbols of the Foundation UI Components</span></li>
+                        <li><span>Flexible Grid Symbols for all screen sizes</span></li>
+                        <li><span>Preset Document Colors based on Foundation presets</span></li>
+                    </ul>
+                    <!-- <img class="icon" src="assets/DX_1.png" /> -->
+                    <img class="icon" src="assets/DX_2.png" />
+                    <img class="icon" src="assets/DX_3.png" />
+                </div>
+            </div>
+            <div class="row component__row" id="front-end">
+                <div class="col-md-4 component__links">
+                    <h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/Fe_Icon.svg" class="small-icon" /> Front-End</h3>
+                    <h4>Resources</h4>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Click', eventLabel: 'Front End - Documentation'});" href="https://github.com/BlueOakJS/blueoak-ui/wiki" target="_blank"><img src="assets/DL_Icon.svg" /> Documentation</a></h3>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Download', eventLabel: 'Front End - GitHub Repository'});" href="https://github.com/BlueOakJS/blueoak-ui" target="_blank"><img src="assets/DL_Icon.svg" /> GitHub Repo</a></h3>
+                </div>
+                <div class="col-md-8 component__description">
+                    <h3 class="hidden-xs hidden-sm"><img src="assets/Fe_Icon.svg" class="small-icon" /> Front-End</h3>
+                    <p>BlueOak FE pre-integrates high-quality open source components and automates common tasks to simplify and accelerate development. With greater consistency and fewer bugs, developers can focus efforts on functions that deliver increased busines value.</p>
+                    <p>BlueOak FE integrates open source components, such as AngularJS 1.x, Foundation for Sites, Cordova, Gulp, Browsersync, Swagger/OpenAPI, with a best-of-breed build system to reduce the amount of time spent on the table stakes of app development. Components provide higher level UI tasks, such as Googe maps and card.io, and utilizing BlueOak DX along with FE provides a common design language across your teams resulting in greater efficiencies in your UI development.</p>
+                    <img class="icon" src="assets/FE_1.png" />
+                    <img class="icon" src="assets/FE_2.png" />
+                    <img class="icon" src="assets/FE_3.png" />
+                    <img class="icon" src="assets/FE_4.png" />
+                    <img class="icon" src="assets/FE_5.png" />
+                    <img class="icon" src="assets/FE_6.png" />
+                    <img class="icon" src="assets/FE_7.png" />
+                    <img class="icon" src="assets/FE_8.png" />
+                </div>
+            </div>
+            <div class="row component__row" id="back-end">
+                <div class="col-md-4 component__links">
+                    <h3 class="hidden-xl hidden-lg hidden-md mobile-title"><img src="assets/BE_Icon.svg" class="small-icon" /> Back-End</h3>
+                    <h4>Resources</h4>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Click', eventLabel: 'Back End - Documentation'});" href="https://github.com/BlueOakJS/blueoak-server/wiki" target="_blank"><img src="assets/DL_Icon.svg" /> Documentation</a></h3>
+                    <h3 class="blue"><a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Download', eventLabel: 'Back End - GitHub Repository'});" href="https://github.com/BlueOakJS/blueoak-server" target="_blank"><img src="assets/DL_Icon.svg" /> GitHub Repo</a></h3>
+                </div>
+                <div class="col-md-8 component__description">
+                    <h3 class="hidden-xs hidden-sm"><img src="assets/BE_Icon.svg" class="small-icon" /> Back-End</h3>
+                    <p>BlueOak Server, built on Swagger/Open API, combines the best Node.js libraries into a single tool for building RESTful APIs. It uses Express under the covers and adds many additional features:</p>
+                    <ul>
+                        <li><span>Easy configuration</span></li>
+                        <li><span>Clustering</span></li>
+                        <li><span>Logging</span></li>
+                        <li><span>Dependency Injection</span></li>
+                    </ul>
+                    <p>Using Swagger API to drive runtime behavior, BlueOak Server loads your Swagger API spec, connects the paths it defines to your implementation code, exposes that API to the network and validates that every request is well-formed per your spec. BlueOak Server will even generate documentation using <a onClick="ga('send', 'event', { eventCategory: 'Resource', eventAction: 'Click', eventLabel: 'Back End - Swagger-UI Link'});" href="http://swagger.io/swagger-ui/" target="_blank">swagger-ui</a>.</p>
+                    <img class="icon" src="assets/BE_1.png" />
+                    <img class="icon" src="assets/BE_2.png" />
+                    <img class="icon" src="assets/BE_3.png" />
+                </div>
+            </div>
+        </div>
+        <div class="carousel__container">
+            <div class="row carousel" ng-app="carousel" ng-controller="carouselCtrl">
+                <div class="col-xs-12 article__desktop-row">
+                    <!-- Static Carousel -->
+                    <!-- <div class="col-xs-4 article" ng-repeat="article in articles">
 							<div class="article__container">
 								<img class="article__image" ng-src="{{article.img}}" />
 								<h4 class="article__title">{{article.title}}</h4>
@@ -145,52 +168,55 @@
 								<a ng-href="{{article.link}}" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
 							</div>
 						</div> -->
-						<div class="col-xs-4 article">
-							<div class="article__container">
-								<img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/12/Blog_DX_350x200.png" />
-								<a href="https://www.pointsource.com/blog/design-patterns-meet-dev-frameworks/" target="_blank"><h4 class="article__title">HEY, DESIGN PATTERNS. MEET DEV FRAMEWORKS.</h4></a>
-								<p class="article__content">There’s a lot of pressure on mobile design and development teams to both innovate and reduce costs...</p>
-								<a href="https://www.pointsource.com/blog/design-patterns-meet-dev-frameworks/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
-							</div>
-						</div>
-						<div class="col-xs-4 article">
-							<div class="article__container">
-								<img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/02/Blog_BE_350x200.png" />
-								<a href="https://www.pointsource.com/blog/developing-an-aggregation-tier-with-blueoak-server/" target="_blank"><h4 class="article__title">DEVELOPING AN AGGREGATION TIER WITH BLUEOAK SERVER</h4></a>
-								<p class="article__content">Often times, at PointSource, we need to integrate with systems of record which are controlled by someone else...</p>
-								<a href="https://www.pointsource.com/blog/developing-an-aggregation-tier-with-blueoak-server/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
-							</div>
-						</div>
-						<div class="col-xs-4 article">
-							<div class="article__container">
-								<img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/02/Blog_BE_350x200.png" />
-								<a href="https://www.pointsource.com/blog/blueoak-server-released-to-open-source-to-accelerate-nodejs-development/" target="_blank"><h4 class="article__title">BLUEOAK SERVER RELEASED TO OPEN SOURCE TO...</h4></a>
-								<p class="article__content">At PointSource we’ve embraced Node.js as a technology for building the RESTful APIs that power our apps...</p>
-								<a href="https://www.pointsource.com/blog/blueoak-server-released-to-open-source-to-accelerate-nodejs-development/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel__paddle carousel__paddle--left hidden-sm hidden-md hidden-lg hidden-xl" onClick="scroll('left')"><i class="glyphicon glyphicon-chevron-left"></i></div>
-				<div class="carousel__paddle carousel__paddle--right hidden-sm hidden-md hidden-lg hidden-xl" onClick="scroll('right')"><i class="glyphicon glyphicon-chevron-right"></i></div>
-			</div>
-			<div class="container">
-				<div class="row component__row">
-					<div class="col-md-12 center">
-						<button class="contact-btn" onClick="openLink()">Contact Us</button>
-					</div>
-				</div>
-				<div class="row licensing">
-					<div class="col-md-12 center">
-						<p>Licensing: BlueOak is an open source project licensed under the terms of the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a></p>
-					</div>
-				</div>
-				<div class="row copyright">
-					<div class="col-md-12 center">
-						<p>BlueOak is a project managed by <a href="http://pointsource.com/" target="_blank">PointSource</a></p>
-					</div>
-				</div>
-			</div><!-- End container -->
-		</div><!-- End container-900 -->
-	</body>
+                    <div class="col-xs-4 article">
+                        <div class="article__container">
+                            <img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/12/Blog_DX_350x200.png" />
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'HEY, DESIGN PATTERNS. MEET DEV FRAMEWORKS.'});" href="https://www.pointsource.com/blog/design-patterns-meet-dev-frameworks/" target="_blank"><h4 class="article__title">HEY, DESIGN PATTERNS. MEET DEV FRAMEWORKS.</h4></a>
+                            <p class="article__content">There’s a lot of pressure on mobile design and development teams to both innovate and reduce costs...</p>
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'HEY, DESIGN PATTERNS. MEET DEV FRAMEWORKS.'});" href="https://www.pointsource.com/blog/design-patterns-meet-dev-frameworks/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 article">
+                        <div class="article__container">
+                            <img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/02/Blog_BE_350x200.png" />
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'DEVELOPING AN AGGREGATION TIER WITH BLUEOAK SERVER'});" href="https://www.pointsource.com/blog/developing-an-aggregation-tier-with-blueoak-server/" target="_blank"><h4 class="article__title">DEVELOPING AN AGGREGATION TIER WITH BLUEOAK SERVER</h4></a>
+                            <p class="article__content">Often times, at PointSource, we need to integrate with systems of record which are controlled by someone else...</p>
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'DEVELOPING AN AGGREGATION TIER WITH BLUEOAK SERVER'});" href="https://www.pointsource.com/blog/developing-an-aggregation-tier-with-blueoak-server/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 article">
+                        <div class="article__container">
+                            <img class="article__image" src="https://www.pointsource.com/wp-content/uploads/2016/02/Blog_BE_350x200.png" />
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'BLUEOAK SERVER RELEASED TO OPEN SOURCE TO...'});" href="https://www.pointsource.com/blog/blueoak-server-released-to-open-source-to-accelerate-nodejs-development/" target="_blank"><h4 class="article__title">BLUEOAK SERVER RELEASED TO OPEN SOURCE TO...</h4></a>
+                            <p class="article__content">At PointSource we’ve embraced Node.js as a technology for building the RESTful APIs that power our apps...</p>
+                            <a onClick="ga('send', 'event', { eventCategory: 'Blog', eventAction: 'Click', eventLabel: 'BLUEOAK SERVER RELEASED TO OPEN SOURCE TO...'});" href="https://www.pointsource.com/blog/blueoak-server-released-to-open-source-to-accelerate-nodejs-development/" target="_blank" class="article__continue-reading"><img src="assets/continue-reading.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__paddle carousel__paddle--left hidden-sm hidden-md hidden-lg hidden-xl" onClick="scroll('left')"><i class="glyphicon glyphicon-chevron-left"></i></div>
+            <div class="carousel__paddle carousel__paddle--right hidden-sm hidden-md hidden-lg hidden-xl" onClick="scroll('right')"><i class="glyphicon glyphicon-chevron-right"></i></div>
+        </div>
+        <div class="container">
+            <div class="row component__row">
+                <div class="col-md-12 center">
+                    <button class="contact-btn" onClick="ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Click', eventLabel: 'Contact Us'});openLink();">Contact Us</button>
+                </div>
+            </div>
+            <div class="row licensing">
+                <div class="col-md-12 center">
+                    <p>Licensing: BlueOak is an open source project licensed under the terms of the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a></p>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-md-12 center">
+                    <p>BlueOak is a project managed by <a onClick="ga('send', 'event', { eventCategory: 'PointSource', eventAction: 'Click', eventLabel: 'Visit PointSource.com'});" href="http://pointsource.com/" target="_blank">PointSource</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End container -->
+    </div>
+    <!-- End container-900 -->
+</body>
+
 </html>
