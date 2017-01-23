@@ -294,6 +294,10 @@ h3 a img {
 	vertical-align: bottom;
 }
 
+.col-md-4.col-xs-12.article {
+	padding-top: 40px;
+}
+
 /* This is the breakpoint where it all folds up */
 @media screen and (max-width: 991px) { 
 	.highlights {
